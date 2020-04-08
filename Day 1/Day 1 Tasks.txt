@@ -1,0 +1,11 @@
+1. Hello World Application
+2. 5 Datatypes
+	int
+	bool
+	float
+	list
+	map
+3. Variables
+4. Operators (Arithmetic, Equality, Relational, Logical, Conditional Operators)
+5. Definite Loops and Indefinite Loops - For, While and Do-while loop
+6. Functions
