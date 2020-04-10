@@ -1,26 +1,30 @@
 class Student{
   String name;
   int rollNo;
-  int marks;
   String sec;
-
-  void showStudentData(){
-    print(name);
-    print(rollNo);
-    print(marks);
-    print(sec);
+  int marks;
+  
+  void addData(Student stu1){
+    stu1.name = "R P S Naik";
+    stu1.rollNo = 23;
+    stu1.sec = "10th Standard";
+    stu1.marks = 82;
   }
-
-  Student({
-    this.name,
-    this.rollNo,
-    this.marks,
-    this.sec
-  });
+  
+  void showData(Student stu1){
+    print(stu1.name);
+    print(stu1.rollNo);
+    print(stu1.sec);
+    print(stu1.marks);
+  }
+  
+  
 }
 
-main(){
-  Student stu1 = Student(name: "R P S Naik", rollNo: 23, marks: 79, sec: "10th Class");
-
-  stu1.showStudentData();
+void main(){
+  Student stu1 = Student();
+  
+  stu1.addData(stu1);
+  
+  stu1.showData(stu1);
 }
