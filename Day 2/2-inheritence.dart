@@ -1,30 +1,38 @@
 class Student{
   String name;
   int rollNo;
-  int marks;
   String sec;
-
-  Student({
-    this.name,
-    this.rollNo,
-    this.marks,
-    this.sec
-  });
-}
-
-class StudenetFun extends Student{
-  void showStudentData(Student data){
-    print(data.name);
-    print(data.rollNo);
-    print(data.marks);
-    print(data.sec);
+  int marks;
+  
+  void addData(Student stu1){
+    stu1.name = "R P S Naik";
+    stu1.rollNo = 23;
+    stu1.sec = "10th Standard";
+    stu1.marks = 82;
   }
+  
+  
+}
+
+class ChildClass extends Student{
+  
+  void showData(Student stu1){
+    print(stu1.name);
+    print(stu1.rollNo);
+    print(stu1.sec);
+    print(stu1.marks);
+  }
+  
 }
 
 
-main(){
-  Student stu1 = Student(name: "R P S Naik", rollNo: 23, marks: 79, sec: "10th Class");
-  StudenetFun studenetFun = StudenetFun();
 
-  studenetFun.showStudentData(stu1);
+
+void main(){
+  Student stu1 = Student();
+  
+  ChildClass child = ChildClass();
+  child.addData(stu1);
+  
+  child.showData(stu1);
 }
